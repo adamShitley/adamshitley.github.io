@@ -1,1 +1,0 @@
-# adamshitley.github.io
