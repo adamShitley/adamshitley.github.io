@@ -1,1 +1,2 @@
-# Resources for school :)
+# Code Editor
+Code Editor (School)
