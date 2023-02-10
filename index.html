@@ -3,39 +3,9 @@
 
 <html>
   <head>
-    <title>Text Input and Save</title>
+    <title>slaugher my family</title>
   </head>
   <body>
-    <h1>Enter some text and click the button to save it to a file:</h1>
-    <form>
-      <input type="text" id="text-input" />
-      <button type="button" onclick="saveText()">Save Text</button>
-    </form>
-    <script>
-      function saveText() {
-        // Get the text from the input field
-        var text = document.getElementById("text-input").value;
-
-        // Create a new Blob object containing the text
-        var textBlob = new Blob([text], {type: "text/plain"});
-
-        // Create a link element to download the file
-        var downloadLink = document.createElement("a");
-
-        // Set the download link's attributes
-        downloadLink.download = "text.txt";
-        downloadLink.href = URL.createObjectURL(textBlob);
-        downloadLink.style.display = "none";
-
-        // Add the link to the page
-        document.body.appendChild(downloadLink);
-
-        // Click the link to download the file
-        downloadLink.click();
-
-        // Remove the link from the page
-        document.body.removeChild(downloadLink);
-      }
-    </script>
+    <h1>your ip has been leaked please kill my family</h1>
   </body>
 </html>
