@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>MOVIES</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #121212;
-      color: #ffffff;
+      background-image: linear-gradient(to bottom, #eb6262, #93e762);
+      color: #000000;
       font-family: 'Orbitron', Arial, sans-serif;
       text-align: center;
       padding: 40px;
@@ -60,12 +61,14 @@
       font-size: 1.5em;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       text-decoration: none;
-      color: #ffffff;
+      color: #000000;
     }
   </style>
 </head>
 <body>
-  <h1>General Movies</h1>
+  <h1 style="color:rgb(0, 0, 0);text-align:center;font-size: 3em;">Shitleyadam</h1>
+  <h2 style="color:rgb(0, 0, 0);text-align:center;font-size: 1.5em;">Please report any bugs/issues with the website or movies</h2>
+  <h2 style="color:rgb(0, 0, 0);text-align:center;font-size: 1.5em;">Movies only added upon request</h2>
 
   <div class="button-container">
     <button onclick="loadMovie('Minecraft Movie', 'https://macdn.hakunaymatata.com/resource/d3f493124fb8e41dd83933475997072c.mp4?Expires=1749351333&Signature=ALMAN8aC1GYKBdXxcJDXT1yQZxQLz4bxL0TEX2iaNAWX67AsJUi0Jz7vulm1zKwdCb6ZoYcrr3RxTGNUlYHfkFSmNPG~-eqZxJ0zp~xXDP9C3B~EVCOv~IILuRsC6zq3fswf-ymaJVUfdOD9Coue5rdQDWwsMFCkhgdNbitjHZY06bdjQ1OsPfczJHgoQm9iy3v2urrKEKBYCJ5OrSvM-zDK70soH9UTtQCx21A6Ry93lfqSb1u9PaE0lxBrlSJrb0ZXGCxMV16EUBZ5Yf8n6lCWMGebG4hTUQP8RAtfqHXGTJhTxbUARjQDWtzFgX4NIm7Xzvjt9kNbfhlQJWqjBA__&Key-Pair-Id=KMHN1LQ1HEUPL')">Minecraft Movie</button>
@@ -397,7 +400,7 @@
         document.body.innerHTML = `
         <h1 style="color:red;text-align:center;">Access Denied</h1>
         <p style="color:red;text-align:center;font-size:14px;">
-          Note: If you're zoomed in (e.g., holding Ctrl and scrolling), access may be denied.
+          Note: If you're zoomed in (holding Ctrl and scrolling), access may be denied.
         </p>
       `;
       }
