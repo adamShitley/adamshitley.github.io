@@ -359,52 +359,49 @@
   </video>
 
   <script>
-    function loadMovie(title, url) {
-      const video = document.getElementById('movie-player');
-      const source = document.getElementById('movie-source');
-      const heading = document.getElementById('movie-title');
+  // 🎬 Movie/Series Loader
+  function loadMovie(title, url) {
+    const video = document.getElementById('movie-player');
+    const source = document.getElementById('movie-source');
+    const heading = document.getElementById('movie-title');
 
+    if (video && source && heading) {
       source.src = url;
       video.load();
       video.style.display = 'block';
       heading.textContent = title;
+    } else {
+      console.error("Movie player elements not found.");
     }
+  }
 
-    function loadSeriesEpisode(select) {
-      const value = select.value;
-      if (!value) return;
+  function loadSeriesEpisode(select) {
+    const value = select.value;
+    if (!value) return;
 
-      const [title, url] = value.split('|');
-      loadMovie(title, url);
+    const [title, url] = value.split('|');
+    if (title && url) {
+      loadMovie(title.trim(), url.trim());
+    } else {
+      console.error("Invalid episode format in option value.");
     }
+  }
 
-    // 🔒 DevTools deterrents
-    document.addEventListener('contextmenu', function(e) {
+  // 🔒 DevTools Deterrents
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+      (e.ctrlKey && e.key === 'U')
+    ) {
       e.preventDefault();
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
-        (e.ctrlKey && e.key === 'U')
-      ) {
-        e.preventDefault();
-        alert("nonono buddy");
-      }
-    });
-
-    setInterval(() => {
-      const devtoolsOpen = window.outerHeight - window.innerHeight > 150;
-      if (devtoolsOpen) {
-        document.body.innerHTML = `
-        <h1 style="color:red;text-align:center;">Access Denied</h1>
-        <p style="color:red;text-align:center;font-size:14px;">
-          Note: If you're zoomed in (holding Ctrl and scrolling), access may be denied.
-        </p>
-      `;
-      }
-    }, 1000);
-  </script>
+      alert("nonono buddy");
+    }
+  });
+</script>
 </body>
 </html>
