@@ -18,31 +18,127 @@
     }
 
     video {
+      display: block;
+      margin: 0 auto 40px auto;
       width: 80%;
       max-width: 720px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .button-container {
+      margin-bottom: 40px;
+    }
+
+    button {
+      background-color: #1f1f1f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    select {
+      background-color: #1f1f1f;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 1em;
       margin-bottom: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>minecraft movie ayo</h1>
-  <video controls>
-    <source src="https://macdn.hakunaymatata.com/resource/d3f493124fb8e41dd83933475997072c.mp4?Expires=1749351333&Signature=ALMAN8aC1GYKBdXxcJDXT1yQZxQLz4bxL0TEX2iaNAWX67AsJUi0Jz7vulm1zKwdCb6ZoYcrr3RxTGNUlYHfkFSmNPG~-eqZxJ0zp~xXDP9C3B~EVCOv~IILuRsC6zq3fswf-ymaJVUfdOD9Coue5rdQDWwsMFCkhgdNbitjHZY06bdjQ1OsPfczJHgoQm9iy3v2urrKEKBYCJ5OrSvM-zDK70soH9UTtQCx21A6Ry93lfqSb1u9PaE0lxBrlSJrb0ZXGCxMV16EUBZ5Yf8n6lCWMGebG4hTUQP8RAtfqHXGTJhTxbUARjQDWtzFgX4NIm7Xzvjt9kNbfhlQJWqjBA__&Key-Pair-Id=KMHN1LQ1HEUPL" type="video/mp4">
+  <h1>Select a Movie</h1>
+
+  <div class="button-container">
+    <button onclick="loadMovie('Minecraft Movie', 'https://macdn.hakunaymatata.com/resource/d3f493124fb8e41dd83933475997072c.mp4?Expires=1749351333&Signature=ALMAN8aC1GYKBdXxcJDXT1yQZxQLz4bxL0TEX2iaNAWX67AsJUi0Jz7vulm1zKwdCb6ZoYcrr3RxTGNUlYHfkFSmNPG~-eqZxJ0zp~xXDP9C3B~EVCOv~IILuRsC6zq3fswf-ymaJVUfdOD9Coue5rdQDWwsMFCkhgdNbitjHZY06bdjQ1OsPfczJHgoQm9iy3v2urrKEKBYCJ5OrSvM-zDK70soH9UTtQCx21A6Ry93lfqSb1u9PaE0lxBrlSJrb0ZXGCxMV16EUBZ5Yf8n6lCWMGebG4hTUQP8RAtfqHXGTJhTxbUARjQDWtzFgX4NIm7Xzvjt9kNbfhlQJWqjBA__&Key-Pair-Id=KMHN1LQ1HEUPL')">Minecraft Movie</button>
+
+    <button onclick="loadMovie('The Lego Movie', 'https://vgorigin.hakunaymatata.com/resource/fc1c7be18b930d16e3e7a65220b84379.mp4?Expires=1749234947&KeyName=wefeed&Signature=7yOSeDKRwI2PoLaqyOSOhU3cQuNmX8EvxSof_ZaCtse57T0mgC_y4Pay5wdfwJeCSGTb2xQvDt7_4y4djuKmDA')">The Lego Movie</button>
+
+    <button onclick="loadMovie('The Lego Movie 2', 'https://macdn.hakunaymatata.com/resource/44e5e7c753f8266858d587e690d274e2.mp4?Expires=1749205018&Signature=sVit7K6-V12p61isazjsz0~w-FFLKgrNzmWq2hJ~IrX11rLqQUzt~RAiC8XA8bYV0L4dtvpINuimPesUAY95FDhGmzzlB61Anjcun2~462D3~wP015NCxXgkhyTKP-s6~pqu9EHgCG7OL2MmfVu0KUfLO15OEriFzUIrseqdmMFqlW39s7DkqANe8gAba~UmKRerL-mt80KVp9fDwrCyBO1E8ws8igPCWwhFP1se8nckeYDNnkjNVSUHLBPPE2kzPHZgsBuCZ0eH1KoHmsDw8MqQU--JBEoUB~qEAMqEk3jwtwwvdfiNnU-6zMDqgOigoQXfJPHTgXyQkMhew9dwBA__&Key-Pair-Id=KMHN1LQ1HEUPL')">The Lego Movie 2</button>
+
+    <button onclick="loadMovie('Mission: Impossible', 'https://macdn.hakunaymatata.com/resource/11f922779988cf339168cdde38dd84f5.mp4?Expires=1749359584&Signature=7WgQancXsm3XS9DtBUP63OAjCOeX5h~EMKrR13tGJgfNSlzhx~SAQWbrI5hvIv5eNlgui9xXATh7Ufhq1m02n9o83TTkCtpQWtrJW-L-1k7bmbDa-aXeCwhu1IM5I0o56g9EAmMTfdUy-12lB-mXolY0B2hCzsCPzvCk8h6k6YM3STmO8NgtAlYm4Cpn3BxvMvUehbxBqioQdSekJE6QPKrDHCmRWjpRjQRkWz5pCIlbUuxx6uQo5KwkNc0opnvWVB4w4QPOPrTdt75SBstaobJ1qI48u5Js3gZ96O2dYR6W26MRtf2hWH12Tkd2JwUufx5FxItnXqRxJ7LuRpzyvw__&Key-Pair-Id=KMHN1LQ1HEUPL')">Mission: Impossible</button>
+
+    <button onclick="loadMovie('Mission: Impossible II', 'https://macdn.hakunaymatata.com/cms/f26dfc974ea8de6193745956a14a3162.mp4?Expires=1749352778&Signature=w~GlN-HdLqXmlR2z3vkQvJzfjK9hgeS9pOEmPkTr6EOGCp44R11j0-M9b6dwXnuYsMSvHfFZ9nJduSo~VcvrrdbuLY9fNsRWoKodSy4W2UGxZwGVrFxK3WMio39DJWnFh7jDG9FKjadVT6D6UZR5kwYzBHK6vIK8c-MVqhX00L1VeIxLg0cLAcK4JbNW6v3msNnq9sr-eFSolXdN0vA2vvgQpp1xrOh1r4WC6NpBsDGNJ7zMrSCX92vg2onGcBoqILcnIQLPxmREt9YRZ7Km~riJyPs0hyeigzfqX9nfAf8vPZQ3oQXAcPQPwUBnMoJ~RMCH8J8UqxqViwYmVGtlRg__&Key-Pair-Id=KMHN1LQ1HEUPL')">Mission: Impossible II</button>
+
+    <button onclick="loadMovie('Mission: Impossible III', 'https://macdn.hakunaymatata.com/resource/a193b34125b9a20a5e03cc7507009e6a.mp4?Expires=1749352958&Signature=JGGQJqr4OArGUTPzUpFpryZGRAtg7XpBoKpNOTaaJYHxBF39kDUFvJslouIMLcoTbB3G02HZxW9kMYvesl5iBnlcFrMxMeCVEWZulbNolpPxwlkO-bhWbUZMEJXnda5OBqPneCWldfwUNsdzbS~JOQ1mXE98jMB52X7CSpVuKa1IBBEXmJBToXbiU2f4fCToZFfu0jJpsNE~r1T2OkquLLcyDDM44X30AruXeEQH8EEuT7-jtNsfCk7dz43uc3IO0Zei2v1t9Tw6W7K5zEzUwkL1Kf0x2YYjLTCfk51XvJjBfzcCZtV8UNvRZDdHw-T0ogUEJ23iVVz6x2K1hBqlrw__&Key-Pair-Id=KMHN1LQ1HEUPL')">Mission: Impossible III</button>
+
+    <button onclick="loadMovie('Mission: Impossible - Ghost Protocol', 'https://vgorigin.hakunaymatata.com/resource/45097cad253e63ca5f3ab4d705ccaa6c.mp4?Expires=1749304189&KeyName=wefeed&Signature=U0sCBOsTFaMZf-Mb6ovqNZujghknliwXsZlK-DDUD8J7pXKIAAssz26CMxv_AZxaz_nYpPatgFkfYe75g3YEAQ')">Mission: Impossible - Ghost Protocol</button>
+
+    <button onclick="loadMovie('Mission: Impossible - Fallout', 'https://vgorigin.hakunaymatata.com/resource/830c40ade58888194549b09662a0f134.mp4?Expires=1749313001&KeyName=wefeed&Signature=aJfUV4djZLvWQzkMo1veD7hJyIzpimvrf6oIAwj1acFAdC3rmpWpDYE8GP2euyFWYJ2GH56RoxkXZ-FoKr7EBw')">Mission: Impossible - Fallout</button>
+
+    <button onclick="loadMovie('Mission: Impossible - Dead Reckoning Part One', 'https://macdn.hakunaymatata.com/resource/e6eb1ea9e24ce15b90e595cdc3afbf61.mp4?Expires=1749297589&Signature=D3avhJ16T9trk6BOttYJZ8SwDx6mQafySgCJNAS2dToF4GMBx1EeTkOywRX~B0WMB~fZuk~L~7HHNqvhWt4ObsvccH4Y-bl8~DqFnupkRILuXHONwaTKMpIYrc8qDwzc5DjlIqzFQqGv~vvrX-5yxhLQcr1cidy1CgUN9lM408TSEtzw~SxCkQDcANlvK2pRNjhX-KvYozp64yXyVhWQLq92tny5SHZUyavDgviI5Qnyn-xsJxsBvJy0SmurJeos6gUsqqzbOt49rOR70TuUZIp92wuiYPQ9r0-JoSgNx-vUIfmDiMIFFjFB~iV8phgCnPIM~3BNSGzp1v5FPukZ6w__&Key-Pair-Id=KMHN1LQ1HEUPL')">Mission: Impossible - Dead Reckoning Part One</button>
+  </div>
+
+  <h2>Select a Series Episode</h2>
+  <select onchange="loadSeriesEpisode(this)">
+    <option value="">-- Select Episode --</option>
+
+    <optgroup label="Season 1">
+      <option value="Ryomen Sukuna|https://macdn.hakunaymatata.com/resource/abc832795a1930a914ae027ab9cc5be5.mp4?Expires=1749286614&Signature=5YOM4c7Q-gBQzrO6-aFi0qjQAPfpg6WLNgbeCMyawpq1Zgwp4ORt2iAh~LA3SK~RUfhyi25v27YGHUbNZi8EHOXKKEIkp3heF7aedBUxoM3P02MMznlqglY0pS-E-N7mWvjzA-wizFluzf4XLEm-NvOoCe3RwAUsS1Owtz9AsagwEQxs9lOlcvEjz4KVAhNetTmDqB5vUhk2Oq3Nce4HqJ~U7GVN41ZhaF6X66NIFiiwKtdzvjpqBeoVIFhTvhsd-Wm~oQimcKrS~a39bhg3TsgDbkqOrEbYuEqy1n8dOocSwbloNUWyB-KI0TXtFVDuwV8gSLqkDpAxTN5ce6MDDg__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E1 - Ryomen Sukuna</option>
+      <option value="For Myself|https://vgorigin.hakunaymatata.com/resource/3f03f88fa1a41bd2ffb4010fba9e1fe9.mp4?Expires=1749083398&KeyName=wefeed&Signature=wZG3YHowJcRRtrGpyCewikwJ7fS8dDUzKO_qvxng50rGx9FDMcPdoBOHvunFCFqa1QzJeKiVKrqLAWlOZk6rBQ">S1E2 - For Myself</option>
+      <option value="Girl of Steel|https://macdn.hakunaymatata.com/resource/31adea53bf3182d22a6b06abe1795602.mp4?Expires=1749081633&Signature=zOt8x1BmcIS4V7GVpG2rQYAjOmvuUzzrR3r204M1YzbaRwrEdTfcJyCkOBXqTzd6GGBACf2LWQHTElNxqJxSSbh7bi7eSkBEvPtHun4Q~3eGEgljAWuTie-5JuN7AhKzg9TQvvGzN7WUXLEpBWJtQXunxOkvhXTF2lcLSlQxYc3L1ApLR8SvFeVJOP06n1COjxSH~6f-SR3MB1Xlz77noVhncP~3v3lz794SNxU~~6l2MFs~P9iY5VJKg14Jm4SuvOiS1xZg6O6D2uquo9AFD9miTvNefjjV61jk0z~8JhU2j4Ua9PVMVhYIJyJbBUFErl0ubHl82kLVx1bw3X8vEw__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E3 - Girl of Steel</option>
+      <option value="Curse Womb Must Die|https://macdn.hakunaymatata.com/resource/ed9a2aca31a07df4bcdd927eb6637fa0.mp4?Expires=1749227707&Signature=AVQI~n~LCpNgbyBLGAQM-ll8kPbIfgtw5baaI8PmaC4Q1oSj7bSFV1V36Fzwaf56QPpuL1AArpUucsViHWQIM2UFwWO7QwM7VoGZLs-I8xo8qmX404artYpHTsq3QI8EsXoFADyq8c3MWTOTH2NN6VUBTuujdFPN-84hjOLKU7UCsOc723xqTnSqwuOLo6KDjs3Lib~S~MZUhg~36xDs4E3d8ZGRQdsXa~BmTQ~aydoEhQsrCtWvLOShKWYBDIZA3H6Dt2EqrYjop~Rnzoa8VCgoFFIc~14N6cwpdu-PC8F281lPMpdYxJJHOY1OlQS3DI~DoMIWN-W2vQ97uNF2eA__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E4 - Curse Womb Must Die</option>
+      <option value="Curse Womb Must Die -II-|https://macdn.hakunaymatata.com/resource/91a5b96872697cf82b0a59af75b00b06.mp4?Expires=1749114577&Signature=1bN6yN9xLL3m9ZDnM2FY5I7Zc9W7XaDPo1MhgJQw5ymfZan~w5jAxUzSSnEuE5d59VZ43Lm2UeAtnTShhSN7OQj1dKS9nroc-1o6x~LZvXbJt4G7zNVmol9OxPxYnXY2VCC0gWd07qmxUc3bb1u8l~fXS8rlR8CWlAtmngJck5yX59HJaCoUo1j9DD0gAQk8Ia9WHv9ySZIkIOWBkaqn-acuHC6xCssy0gMvNVTrhaOaVgqQtgsAXNiHzQ4pIVJhb4NRc4oV~JycGZ-vuixb3G9e33nPEavWu~1M6Xhh-EePKM6T5803Y18wMUCC43MAGSndorOXPIY8~cfX6CJJ7g__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E5 - Curse Womb Must Die -II-</option>
+      <option value="After Rain|https://macdn.hakunaymatata.com/resource/6745e89311ec914f5a91fde0d4645c83.mp4?Expires=1749185595&Signature=PEDdxUXoq4OM~h9ieY~k0Jbb2X1AHFvQ9t97iZJg3WNGGKne6SRW76iGq2T985j8Ksxear7L5G2KZi33HB-9npRhMTefWjOZCPILMseXkBvZJSLsF45nXOxoDzV1yfGWsNvvT3~6fZljF67ZaMa~pUERZH8HtlAMcOa4GdeeNqfqgbNmLSjGABGbex6v1xt9JyKCntpM~qav23i-ST21jNlpBdNkJiXkcx5U6vgKKnCUc63X79ZI0x7J8cxkXgJ2uQTospKkvQdlzj5boUiKHGtTg6MTkgIgkJcKfuWZOeR9eaUJesW6OUjhRix4Kqcb1HRQLyXiPvetYzF58nX26Q__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E6 - After Rain</option>
+      <option value="Assault|https://vgorigin.hakunaymatata.com/resource/18b42173d5adc2c4e58673ef9f2a22b6.mp4?Expires=1749371008&KeyName=wefeed&Signature=sWrxNebBLMt-QyXxEk3Ec9HW7Fw5zh2q2h73UDYULLcNYQavqHMmK6lQtg1-dVbsAsSgVkmySNZiSgtirhlICA">S1E7 - Assault</option>
+      <option value="Boredom|https://macdn.hakunaymatata.com/resource/c5e370c9db8e1dd3ed3d5bf3e265b212.mp4?Expires=1749371079&Signature=LLndUeXzGwBM0VsceuhOF9zs90bDPUzF63ZnOe-gcWqGF~ycVMGX4oRPrErYIO0CamBmjuoESSTfzhrsy0azsIfyEVFGoeL6g7dHi5wMrkFIL8Z0ZOxo5ntgnsbzcAWnkd-2u7zvoZWCI~Oz-UIwqhgSC32eqVBKvNffHwq2MZ7yMhPF84UkzxehPJoTAUAeNAr08Tae7hpYDG4adr3kw~Ic6cpATZvvq4T47qDQOJs6GKBauMwPKbgUI4Bd8GjF~iNn5BnEDquEM5hY-daglmfr8EamPiOAzFGbfw5SrcRzLWACTtUYKOoVxLSccB2xkBKhN6vgqXeLb52fhOFTbQ__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E8 - Boredom</option>
+      <option value="Small Fry and Reverse Retribution|https://macdn.hakunaymatata.com/resource/20fb7bf70ce5e67a62885743782b8927.mp4?Expires=1749245768&Signature=O5rU2ybSJYcV-rg5lKf~-k8zjDunWYly0aZMu5LR49MdMw-bO8dlnGeNpe52xiyPuQCye1DVAxTVmh7ZHwkYGVgskbBN6y4xNVbuZcV5yg0~V96LXVwFPIk1R64XSOgsOGFS7YRqa5NDIAse6akllJ3Pp73Ccsme1RDsQ2FKpHphMPG2IpYNur~c0JBHK3rTGrJzqy627Vox9NRDQOvanfay-B1dMRYaskQnlT93ZD4Lw0NhYqETE9CJfFu4T4asA1GhrTL4PHxS~~~K4ybNdn7FfKTXJE7p-skU1wATpbKJD26k17ISs8xL5wMcyT1U6R3pDGMKGa8CkWtCuEJf3g__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E9 - Small Fry and Reverse Retribution</option>
+      <option value="Idle Death Gamble|https://macdn.hakunaymatata.com/resource/40e0412dbddc9fafd4faaafa160bf177.mp4?Expires=1749286889&Signature=c8LiUqImdo-eteH2LvSQtUJr9Dq6FoqD8hMtb-pTwuNQg7dI3ChltH6O-ku6SWTR9V3lvrREXoPJoKPglg9dO-DtINYIzkpA1hWLer4r5a9muzbmVAo-OzSVGHiFug5lvLQWQbKOU0uxVhqX~3lyC1oO7ChMNywF5Lk4hYxcNHRTAZZa-2sWuIpdAfSXZaJMazydlT9q9dMWgdqQy1Z9O3MGxQy8e3FDXNQy2e7U5Q85Q-cQhPRLrwxNrdNk01jSSW2DsoTm6CLZAx~qBrcY6dEv5vQDIo3WAe8aj7rWmH7FIrVDzsS-BgsDPsJtM2FH6G6~vhyF8TeUQ07frK6rfA__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E10 - Idle Death Gamble</option>
+      <option value="Narrow-minded|https://macdn.hakunaymatata.com/resource/50cc8ddbc1e1fc6d8050a0c6c3d59bd2.mp4?Expires=1749256816&Signature=n3OXQQZivtYJ-wyZitej8G7nS1QYU8D7FIzh0hX2XxFq7Y~kFAbbFN4KKnCA28m5jvgkeD6ZB9Holk7O6gQZzT4PyonJDhuQJ0Um2ga1eLtB5YyQnKkcd8rdDe2vwsBE76qBuBWV3FQ97CpFTo8a6U8ZraSJuiQusuFdZMSZBveNmM0-d6mas7rKVZZ4UyYaXXHejf9GRx71PfjDUWcNuVPBvSXr6nR3kJ2xCMrXG3dXLPnmYxB2xm9l3jXG-kzHN8zqcVkQ7IvnDBMw8iAOAFUcg4TzKsPAjiblQTL1wJNkaWZ1Mv97mYgMy4-HQ8PKOoaKPgy6MwNzwUp7MMjtqg__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E11 - Narrow-minded</option>
+      <option value="To You, Someday|https://macdn.hakunaymatata.com/resource/741055a6913285aa11638c819af2665c.mp4?Expires=1749372190&Signature=arvhl1XZ6~5mH1iAOiWyeN7Fd5vsxlJVW79TwWj~vxRa4Ox5pHidKKleKAonofMS8zju5GjYXob4-9vOLios~GCzYDzXiZv5zZDaPx2mGE0EuTvp-YQDmWzIv-ifrBVUFnebCNrneNlMSC0N0Iz39ol6bEmY6DAXkUtuxiDal-zQCruBLw7SU7z8yn68EYo5bwuKDZLxTgRorHL3iYGwvldfHkUjaJlPZph9Qcfgv8TqoLhHQZXvib~CS2L~hR3ShBEuNRfvg2ZjZqsDOmYMNEn~9POuzNX-krhRaoKsHjVB4lKgO7hUjGbKklq1OF8EZV~Hmy9JFN19NR8TAvzRQQ__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E12 - To You, Someday</option>
+      <option value="Tomorrow|https://macdn.hakunaymatata.com/resource/5cf86df1da32f75882dc67257636bea8.mp4?Expires=1749370939&Signature=VY4KFmk5u-ALjqluICC6VwhS-QOkiGDjNNwqh8kJjNAgu979PZZflYKyJu7rK9oX4opvaNN03F8Hx8EyI-RZGzugxaRGGn9kOjH2HnAtbr~8MNg0HV8I~Pir6TEJvuyFOiGKnYTwor9raqu~SW8k5iEaEUz-8uh-NzOi3bmb0ywy45El9mlI7sJ3P2aJQQJgTLDd4hLSba57hUqXEkJtVS7r7AEg1Eli44IO-ZM1DnbGUyPbFBMcKX6cfbv3O6cBztHxNG9yWRbwvE0f3LIumpw4tkKuJUGOMbUMBPQPSIwtAr~yTRAzmjieu7qnUwyFv~IlNL3UQNin-pEuShjXfA__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E13 - Tomorrow</option>
+      <option value="Kyoto Sister School Exchange Event - Group Battle 0|https://macdn.hakunaymatata.com/resource/1773df4672d9c2e3615619f41ff88197.mp4?Expires=1748385948&Signature=2fZudJFtaWzSyYnB5TT6VeaEusKm3WEiuFWQrvTzC5GznRFoxkWk9~YplISKLqCy32H3x4bEWeSe1kARY9Vq6UljyzVN6-bGJTSSHrNycSMj2qohsGKfJuO1j-6yTUVB1TiL4eXTC1BAcFU7Gs8j9pTD211DTYS~rdDefRd16a5llc1g~USevYhO64uoQCra2MeEihnSS~YxU1ApzCsDPaFTh4S1hg53paoZGXD8QaLumYuZT9zgCXNJ2xs3eDnVZE6MF7Jp7pWEi~YEsMtQkYVbsJ2SHaH0qtK23BokeFbpjqVHSvlmaIEVQFpD8rfnbegPF3U7-2wGLAksrOV67w__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E14 - Kyoto Sister School Exchange Event - Group Battle 0</option>
+      <option value="Kyoto Sister School Exchange Event - Group Battle 1|https://macdn.hakunaymatata.com/resource/1c7ae889202dfe3e5b141baca122121e.mp4?Expires=1749022432&Signature=W~BT9v-M7Y2vAyMVASwdBeFSzEn8KiXsRPbkJmnfI125gScUDt54KoQvMOYLhrTzfI8dyzYanCpxQ~-Cur35vHEgo1ukdDcQdOPq3akJzP4Plz-cEQlY5WlzSywX6aJK21wpdyMe~j2CIguKEbtRdYL5e4XrPyu3o8oPp51YELjG1OdFQddZxKvXsx-Rot3rR9D6crXEMQ-j20f4HNuno8~UFTJDGY6ShXt7qiNvoS3-xI5BDUALGzm3DTdXCCUkplkdurdL308E3qB454V~YyBvLO3hm3XCooQ0EY1V8b1IWGJ-sALLccBNrIESNhLXmiG7YdDwCck3ozC9FPk56g__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E15 - Kyoto Sister School Exchange Event - Group Battle 1</option>
+      <option value="Kyoto Sister School Exchange Event - Group Battle 2|https://macdn.hakunaymatata.com/resource/4d7be4afa292fa773c1da1a6d41ba378.mp4?Expires=1749371055&Signature=z6cpb7f-VyTNrjkPJgTf5uZuFuuOmiEQteI0U9YJcx3JhzZ4ilRId~Oy~PVsKwMvq0BYVWqltoTsXTkLbxBA7hJT-EQvIA8lPWwLn1BDMxSRsv9bHu8knjyx02rsiXpfzgzJL8G5Uzu3wLJJtGCHXfzbrfazQbCsqfMdMndPowSPhPY8anqQ6w~PArg7JcbaK3AJTWIVzbPN2jpW7ZVsydSxFWgZupFBHAmOg1-kRTx13D661rtUr1CEMNfcyxx1J-dbdEeKWBTE90CkMGL0yk7J3PI-xiTl79tf6I6dPFZzX0WM6kZiz5hPfPOu~Vrl4~cvkyD7MUA9-h0ATTYvow__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E16 - Kyoto Sister School Exchange Event - Group Battle 2</option>
+      <option value="Kyoto Sister School Exchange Event - Group Battle 3|https://macdn.hakunaymatata.com/resource/568123263dee942ecaf7c68566bb7d04.mp4?Expires=1749374244&Signature=h~GNG48uDEnx7aJn2MLZy3St0L~mzZWg7t65MnzGH-YEEy~GtEZK5ITaT5tF3DD9zMivr0pHQd9r9F0B4UF4i5mGDwzE4REI87KLhCA62tlsmJbuUsBrh2NxVKotrA7OrQFEp1QtRKTv6kQtYLA~JHqcXSOXI4erTSZuiF5~0rMtNpmgRWLu9yYH7zr6fUYlHqg7s7FrdYhw51c0OqLSkUPw~d55bE0ywPGymtoinYfN8KNRzTp-Hh1~1g85f1B-VowAhpFKSTQL0J70ntf-4nK9JyKxMTTXdzifkMdWeezGfahzFUcHOXSagqUspVcPk70RYWCNO1F4ge~u90hm2g__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E17 - Kyoto Sister School Exchange Event - Group Battle 3</option>
+      <option value="Sage|https://macdn.hakunaymatata.com/resource/83bbeb2fc0dc50c5ae73149bbe431f7d.mp4?Expires=1748742807&Signature=7ndpAQS5~9pwCSEE9DJSh2yqjvO6FouCj3rNurGYp2ceQebzxM7xhBlhmVspcPjzbKZQuYl5KlsM6Ueg3hx3d6nWtqeRy~vpFWJXbH-AwedoW9IL775m9QHJpcDOz-MZiSq30Dgh21zmh9e9cED-EsyJNHTMZ3EUCSWJjsMKLGKIoKRUBofUF9qC4qcYtz21nSg3JdPNj9NKJf9OiMpftJKAy8MsZvzlIBSWe3j56U9EjPBk8j~oncZ61jBACIh7Uq5Dh~3KvFCIyN7j6h9wuHZCDc37ijgUtDrhL000EMMS5U8-Z57GQ2yFW7i5r6E6snefHIPVo3N1tJW95W8V4g__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E18 - Sage</option>
+      <option value="Black Flash|https://macdn.hakunaymatata.com/resource/828caaf0c296628648e4fc3292d24aad.mp4?Expires=1748742615&Signature=YxZXNxYmk13dpSOiKvDmW832s~qXpaj3iMUIrTQnkwepEmbIbcu6BgnDNf9NQ1yGWWji4XcmsFD6~hYb4XbDwVcc8hJxUiydwV8PqEJkUl~TNUmBewQxezS1JCzCcmHXHciR15pJm2Nmq5IoFY5L4fXwn8wRcpEQTbOSC~sBar~JLa6F9r0-jTNid3644yN-TmE3xzUdXEnjvDH6-7VENDf27HXZsFeATLN-05fPC4g6hGWsIES2D8VC7~UCNffsHBWT0cxFyTONF9SDiP0IjiT1lWXT9B4HuGk9N40LrwAXdL30MEpYWYIXs965RSeAyo8U3kZZ1DlxxfI0nZujqA__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E19 - Black Flash</option>
+      <option value="Nonstandard|https://vgorigin.hakunaymatata.com/resource/ebe2620aebdcc35cca22890c2605f2d0.mp4?Expires=1748522944&KeyName=wefeed&Signature=BKW_LTw_PG3FO_tKQMuxiC-kYtQnJQQqkyZGcP4qRIjdRXTxjzKFccnzrI_bsM_8Gc74wK7qAGMmB0VvfRb6DA">S1E20 - Nonstandard</option>
+      <option value="Jujutsu Koshien|https://macdn.hakunaymatata.com/resource/02cca945ec044698c2b05e669d93f061.mp4?Expires=1749371010&Signature=jYIZSzSyXTtj4oVrWehQMiAplJv-PN-HZTlvAHsv-Uz1ZA96IkFukp91FK6Q-KtUBD69f58wXH-0PQvsykaFH3m23PFAko8x-was-8goLVoNiJDWaBUUnDG-A5PAxsXgzC41cvctrr73GoZwg2YU130oLXvAtJ6zKUTbyHMkniOcm6Bh8J3sZIMarVLLPXvbkSrXDdnEK1kUfrXGLeqthdjLRXzcniigR57BJ~92XlOAZNJzmmZDStKryvA93TWx555CtxWk~CY8hcU8OyN5gP01Eatmda1vzLaKY4m1Qhagjw658HMI5WqXCVfKz2phioMLkj-lzda6Rq-zTnH1-Q__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E21 - Jujutsu Koshien</option>
+      <option value="The Origin of Blind Obedience|https://vgorigin.hakunaymatata.com/resource/ce13b04c2843793993d24eff10bac7b3.mp4?Expires=1748179687&KeyName=wefeed&Signature=YRcy2n06NOufZpfPPBKXAmqiAcEcNnFBHn9XriTXpVSc3sNiAZNnUDqLBQDnhUbLLPZHZfRQOmDtfV5wQ5Q7Aw">S1E22 - The Origin of Blind Obedience</option>
+      <option value="The Origin of Blind Obedience - II -|https://macdn.hakunaymatata.com/resource/7a13d3010bc4531423f38b64db139603.mp4?Expires=1749265814&Signature=Ldm1GT1GomfO-IB54wspqS08DxY6zwvolOIXRmlZ1Z9gTxUxcwwYJ86g03s3xQTejo9UwckgX1tVfNUyvvfcEv59qdydv4JXI7xH47P2yr~HvC281H4Qd3lfbr-Hix0Cr59dRCh9tDhH9bvLTHNIdavgTNph09erKvl~urKimRcVYb5aSyMl947gwi5Nbme3m7UjcOO~WCM-l0NBADAP1YzbRaYn-kZ2M-xr7wUSBvlqtOIOcMg4kdDIuuAz2TtiZvh56UELiPBmQ0pi5Mm9uhVOQaxwepkRoppuEEUgfX6nKh8j3EA~pMC2TvV0lg0GDBtLcH~bIALkpNALUgN8Xg__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E23 - The Origin of Blind Obedience - II -</option>
+      <option value="Accomplices|https://macdn.hakunaymatata.com/resource/6e9dd9518e04bcfc7a79a7ab1c10f630.mp4?Expires=1749275762&Signature=gLCHbJPm1Zx07jXmechHFfc9jdhq7kL34E588L~BQMEE4dmQ7m7Tx7p7DmHR1fNUTXVX4oW5vqf9EMD5P1yhi1Yz92Ddc~AEBXMBOTuxRVPYs3HOewVEWjvOyNqf56yujL0Sl6nNlQiAad6~7xbnvnG135-fCSuWOUjXv9q7OQ4GH5tP9qjCoqIq2UMMGIo9Ntdn3cRaPcpNx4fz7FkVWoopoI7VqfTmzIlMCn2~oAmF1UtcpGBVavgIYUIOixW7QvRNRcr0NlQNV-9FbVyX18Cc1eJrnEhnAArcHlMhkH8vVZ8M8xFIw0WcxVryr00wjXqRwIHfUC~6xA8aZhVRng__&Key-Pair-Id=KMHN1LQ1HEUPL">S1E24 - Accomplices</option>
+      </optgroup>
+
+    <optgroup label="Season 2">
+      <option value="S2E1 - Episode 1|">S2E1 - too lazy to add the rest lolllllll</option>
+    </optgroup>
+  </select>
+
+  <h1 id="movie-title">Choose a Movie</h1>
+  <video id="movie-player" controls style="display: none;">
+    <source id="movie-source" src="" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <h1>The Lego Movie</h1>
-  <video controls>
-    <source src="https://vgorigin.hakunaymatata.com/resource/fc1c7be18b930d16e3e7a65220b84379.mp4?Expires=1749234947&KeyName=wefeed&Signature=7yOSeDKRwI2PoLaqyOSOhU3cQuNmX8EvxSof_ZaCtse57T0mgC_y4Pay5wdfwJeCSGTb2xQvDt7_4y4djuKmDA" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <script>
+    function loadMovie(title, url) {
+      const video = document.getElementById('movie-player');
+      const source = document.getElementById('movie-source');
+      const heading = document.getElementById('movie-title');
 
-  <h1>The Lego Movie 2</h1>
-  <video controls>
-    <source src="https://macdn.hakunaymatata.com/resource/44e5e7c753f8266858d587e690d274e2.mp4?Expires=1749205018&Signature=sVit7K6-V12p61isazjsz0~w-FFLKgrNzmWq2hJ~IrX11rLqQUzt~RAiC8XA8bYV0L4dtvpINuimPesUAY95FDhGmzzlB61Anjcun2~462D3~wP015NCxXgkhyTKP-s6~pqu9EHgCG7OL2MmfVu0KUfLO15OEriFzUIrseqdmMFqlW39s7DkqANe8gAba~UmKRerL-mt80KVp9fDwrCyBO1E8ws8igPCWwhFP1se8nckeYDNnkjNVSUHLBPPE2kzPHZgsBuCZ0eH1KoHmsDw8MqQU--JBEoUB~qEAMqEk3jwtwwvdfiNnU-6zMDqgOigoQXfJPHTgXyQkMhew9dwBA__&Key-Pair-Id=KMHN1LQ1HEUPL" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+      source.src = url;
+      video.load();
+      video.style.display = 'block';
+      heading.textContent = title;
+    }
+
+    function loadSeriesEpisode(select) {
+      const value = select.value;
+      if (!value) return;
+
+      const [title, url] = value.split('|');
+      loadMovie(title, url);
+    }
+  </script>
 </body>
 </html>
